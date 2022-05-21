@@ -90,8 +90,8 @@ class CampsiteInfo extends Component {
       <ScrollView>
         <RenderCampsite
           campsite={campsite}
-          favorite={this.props.favorites}
-          markFavorite={() => this.markFavorite()}
+          favorite={this.props.favorites.includes(campsiteId)}
+          markFavorite={() => this.markFavorite(campsiteId)}
         />
         <RenderComments comments={comments} />
       </ScrollView>
